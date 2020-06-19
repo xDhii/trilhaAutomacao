@@ -9,6 +9,6 @@ class HomePage
   end
 
   def click_signup
-    find('//div[@class="panel header"]//a[contains(text(),"Create an Accoun")][1]').click
+    find('//div[@class="panel header"]//a[contains(text(),"Create an Account")][1]').click
   end
 end
