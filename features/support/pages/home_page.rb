@@ -6,9 +6,11 @@ class HomePage
 
   def go
     visit '/'
+    page.has_xpath?(LOCATOR['img_logo'])
   end
 
   def click_signup
-    find('//div[@class="panel header"]//a[contains(text(),"Create an Account")][1]').click
+    find(LOCATOR['link_createuser']).click
+    page.has_xpath?(LOCATOR['input_firstname'])
   end
 end

@@ -1,0 +1,15 @@
+# Common
+
+img_logo:               '//strong[@class="logo"]'
+link_createuser:        '//div[@class="panel header"]//a[contains(text(),"Create an Account")]'
+
+
+# Account Create
+
+input_firstname:        '//input[@id="firstname"]'
+input_lastname:         '//input[@id="lastname"]'
+input_email:            '//div[@class="field required"]//input[@name="email"]'
+input_password:         '//input[@title="Password"]'
+input_confirm_password: '//input[@title="Confirm Password"]'
+button_createaccount:   '//button[@title="Create an Account"]'
+checkbox_newsletter:    '//input[@name="is_subscribed"]'
