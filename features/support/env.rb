@@ -22,7 +22,7 @@ end
 
 Capybara.configure do |config|
   config.default_selector = :xpath
-  config.default_driver = :selenium_chrome # configurar a variável @driver apos finalizar a automação
+  config.default_driver = :selenium_chrome # configurar a variavel @driver
   config.app_host = 'https://magento.nublue.co.uk'
   config.default_max_wait_time = 10
 end

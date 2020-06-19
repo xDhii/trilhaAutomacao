@@ -36,6 +36,5 @@ class AccountCreate
     set_email
     set_password
     click_create_account
-    sleep 10
   end
 end

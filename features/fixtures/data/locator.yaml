@@ -13,3 +13,8 @@ input_password:         '//input[@title="Password"]'
 input_confirm_password: '//input[@title="Confirm Password"]'
 button_createaccount:   '//button[@title="Create an Account"]'
 checkbox_newsletter:    '//input[@name="is_subscribed"]'
+
+
+# Customer Account
+
+alert_registered:       '//div[@role="alert"]//*[contains(text(), "Thank you for registering with Main Website Store.")]'

@@ -10,5 +10,5 @@ Então('devo criar um novo usuário') do
 end
 
 Então('devo estar logado com o usuário criado') do
-  pending # Write code here that turns the phrase above into concrete actions
+  @account_page.alert_check
 end
