@@ -2,6 +2,7 @@
 
 Dado('que estou na página inicial') do
   @home_page.go
+  @home_page.click_signup
   sleep 5
 end
 
