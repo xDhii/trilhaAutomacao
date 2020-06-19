@@ -7,6 +7,7 @@ require 'yaml'
 
 DATA = YAML.load_file('./features/fixtures/data/data.yaml')
 LOCATOR = YAML.load_file('./features/fixtures/data/locator.yaml')
+CONFIG = YAML.load_file("./features/support/config/#{ENV['ENV_TYPE']}.yaml")
 
 # Ruby CASE to set the webdriver
 case ENV['BROWSER']
@@ -22,7 +23,7 @@ end
 
 Capybara.configure do |config|
   config.default_selector = :xpath
-  config.default_driver = :selenium_chrome # configurar a variavel @driver
-  config.app_host = 'https://magento.nublue.co.uk'
+  config.default_driver = @driver
+  config.app_host = CONFIG['url']
   config.default_max_wait_time = 10
 end

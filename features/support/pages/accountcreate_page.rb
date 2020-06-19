@@ -6,28 +6,33 @@ require 'securerandom'
 class AccountCreate
   include Capybara::DSL
 
+  def initialize
+    @locator = LOCATOR['account_create_page']
+    @common = LOCATOR['common_page']
+  end
+
   def set_first_name
-    find(LOCATOR['input_firstname'])
+    find(@locator['input_firstname'])
       .set(DATA['firstName'].to_s + SecureRandom.hex(5).to_s)
   end
 
   def set_last_name
-    find(LOCATOR['input_lastname'])
+    find(@locator['input_lastname'])
       .set(DATA['lastName'].to_s + SecureRandom.hex(5).to_s)
   end
 
   def set_email
-    find(LOCATOR['input_email'])
+    find(@locator['input_email'])
       .set("#{SecureRandom.hex(9)}@#{SecureRandom.hex(4)}.com")
   end
 
   def set_password
-    find(LOCATOR['input_password']).set(DATA['password'])
-    find(LOCATOR['input_confirm_password']).set(DATA['password'])
+    find(@locator['input_password']).set(DATA['password'])
+    find(@locator['input_confirm_password']).set(DATA['password'])
   end
 
   def click_create_account
-    find(LOCATOR['button_createaccount']).click
+    find(@locator['button_createaccount']).click
   end
 
   def create_account

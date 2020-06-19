@@ -1,20 +1,30 @@
-# Common
+# Common Pages
+common_page:
+  img_logo:               '//strong[@class="logo"]'
+  link_signin:            '//a[@class="action skip contentarea"]/following-sibling::ul//a[contains(text(), "Sign In")]'
+  link_createuser:        '//div[@class="panel header"]//a[contains(text(),"Create an Account")]'
+  msg_welcome:            '//li[@class="greet welcome"]'
 
-img_logo:               '//strong[@class="logo"]'
-link_createuser:        '//div[@class="panel header"]//a[contains(text(),"Create an Account")]'
+# Account Create Page
+account_create_page:
+  input_firstname:        '//input[@id="firstname"]'
+  input_lastname:         '//input[@id="lastname"]'
+  input_email:            '//div[@class="field required"]//input[@name="email"]'
+  input_password:         '//input[@title="Password"]'
+  input_confirm_password: '//input[@title="Confirm Password"]'
+  button_createaccount:   '//button[@title="Create an Account"]'
+  checkbox_newsletter:    '//input[@name="is_subscribed"]'
 
+# Customer Account Page
+account_page:
+  alert_registered:         '//div[@role="alert"]//*[contains(text(), "Thank you for registering with Main Website Store.")]'
 
-# Account Create
+# Login Page
+login_page:
+  input_email:            '//fieldset//input[@id="email"]'
+  input_pass:             '//fieldset//input[@id="pass"]'
+  button_signin:          '//div[@class="field-recaptcha"]/following-sibling::div//button[@name="send"]'
 
-input_firstname:        '//input[@id="firstname"]'
-input_lastname:         '//input[@id="lastname"]'
-input_email:            '//div[@class="field required"]//input[@name="email"]'
-input_password:         '//input[@title="Password"]'
-input_confirm_password: '//input[@title="Confirm Password"]'
-button_createaccount:   '//button[@title="Create an Account"]'
-checkbox_newsletter:    '//input[@name="is_subscribed"]'
-
-
-# Customer Account
-
-alert_registered:       '//div[@role="alert"]//*[contains(text(), "Thank you for registering with Main Website Store.")]'
+# Home Page
+home_page:
+  lorem_ipsum:            'lorem_ipsum'
