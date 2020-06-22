@@ -59,3 +59,9 @@ Ex:
 
 Available tags:
 @create_user
+@e2e
+
+Ps: @e2e scenario may fail due to a cron job on the server that block account created within more than 15 minutes. To avoid it, run the @create_user first.
+
+To generate the report with results and screenshots, I've used the report builder tool.
+All the results should be on the results\ folder after running the automation.
