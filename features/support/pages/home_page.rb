@@ -18,4 +18,9 @@ class HomePage
   def click_signup
     find(@common['link_createuser']).click
   end
+
+  def search(product)
+    find(@common['input_search_product']).set(product)
+    wsh.SendKeys('{ENTER}')
+  end
 end

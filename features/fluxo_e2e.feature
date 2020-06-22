@@ -9,6 +9,5 @@ Funcionalidade: Fluxo E2E
     @e2e
     Cenario: Criar nova conta de cliente
         Dado que estou na página inicial
-        E devo logar com as credenciais "adriano@automation.com" e senha "automation-123"
-        Quando escolho um produto
+        Quando escolho o produto "Didi Sport Watch"
         Então finalizo a compra e gero o pedido

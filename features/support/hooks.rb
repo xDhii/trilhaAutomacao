@@ -9,7 +9,7 @@ Before do
 end
 
 Before('@login') do
-  user = CONFIG['users']['client']
+  env_user = CONFIG['users']['client']
   @login_page.go
-  @login_page.with(user['email'], user['pass'])
+  @login_page.with(env_user['email'], env_user['pass'])
 end

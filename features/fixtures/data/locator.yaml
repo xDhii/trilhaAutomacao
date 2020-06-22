@@ -1,6 +1,7 @@
 # Common Pages
 common_page:
   img_logo:               '//strong[@class="logo"]'
+  input_search_product:   '//input[@id="search"]'
   link_signin:            '//a[@class="action skip contentarea"]/following-sibling::ul//a[contains(text(), "Sign In")]'
   link_createuser:        '//div[@class="panel header"]//a[contains(text(),"Create an Account")]'
   msg_welcome:            '//li[@class="greet welcome"]'
@@ -23,7 +24,10 @@ account_page:
 login_page:
   input_email:            '//fieldset//input[@id="email"]'
   input_pass:             '//fieldset//input[@id="pass"]'
+  input_captcha:          '//div[@role="user_login"]//input[@id="captcha_user_login"]'
   button_signin:          '//div[@class="field-recaptcha"]/following-sibling::div//button[@name="send"]'
+  label_account_error:    '//div[@data-bind="html: message.text"][contains(text(), "The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.")]'
+  label_captcha_error:    '//div[@data-bind="html: message.text"][contains(text(), "Incorrect CAPTCHA")]'
 
 # Home Page
 home_page:
