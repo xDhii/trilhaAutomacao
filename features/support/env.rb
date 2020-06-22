@@ -3,6 +3,7 @@
 require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
+require 'os'
 require 'yaml'
 
 DATA = YAML.load_file('./features/fixtures/data/data.yaml')

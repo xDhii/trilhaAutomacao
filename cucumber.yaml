@@ -1,5 +1,5 @@
 ---
-default: -p dev -p chrome -p pretty
+default: -p dev -p chrome -p pretty -p json
 dev: ENV_TYPE=dev
 firefox: BROWSER=firefox
 chrome: BROWSER=chrome

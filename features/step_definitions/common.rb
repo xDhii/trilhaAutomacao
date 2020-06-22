@@ -5,7 +5,6 @@ Dado('que estou na página inicial') do
 end
 
 Dado('que estou logado com {string}') do |usuario|
-  @usuario = usuario
   @account_user = CONFIG['users'][usuario]
   @login_page.go
   @login_page.with(@account_user['email'], @account_user['pass'])

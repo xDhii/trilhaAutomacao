@@ -7,7 +7,7 @@ class CheckoutPage
   def initialize
     @locator = LOCATOR['checkout_page']
     @common = LOCATOR['common_page']
-    @data = CONFIG['users'][@usuario]
+    @data = DATA['shipping_info']
   end
 
   def go
@@ -23,6 +23,7 @@ class CheckoutPage
   end
 
   def fill_checkout_address
+    puts @usuario
     find(@locator['input_company']).set(@data['company'])
     find(@locator['input_address1']).set(@data['address_1'])
     find(@locator['input_address2']).set(@data['address_2'])

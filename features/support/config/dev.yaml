@@ -2,26 +2,8 @@
 url: https://magento.nublue.co.uk
 users:
   new_user:
-    email: 88b6e2a2cdba6ea4be@b9490c6a.com
-    pass: 3f12a88eea4f-_#@
-    company: WebJump
-    address_1: Av. Pres. Juscelino Kubitschek, 50
-    address_2: 7º andar
-    address_3: Vila Nova Conceição
-    city: São Paulo
-    country: Brazil
-    zip: 04543-000
-    state: São Paulo
-    phone: 2338-6889
+    email: bdbd1102780b197205@3464a2db.com
+    pass: 551895470de0-_#@
   old_user:
     email: roni_cost@example.com
     pass: roni_cost3@example.com
-    company: WebJump
-    address_1: Av. Pres. Juscelino Kubitschek, 50
-    address_2: 7º andar
-    address_3: Vila Nova Conceição
-    city: São Paulo
-    country: Brazil
-    zip: 04543-000
-    state: São Paulo
-    phone: 2338-6889
