@@ -6,6 +6,9 @@ Before do
   @account_page = AccountPage.new
   @home_page = HomePage.new
   @login_page = LoginPage.new
+  @catalog_page = CatalogPage.new
+  @product_page = ProductPage.new
+  @checkout_page = CheckoutPage.new
 end
 
 Before('@login') do

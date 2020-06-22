@@ -23,28 +23,17 @@ class LoginPage
   end
 
   def check_captcha_or_error
-    if page.has_xpath?(@locator['label_account_error'])
-      puts "\033\[1;31m\n" # COLOR ALERT
-      puts 'User account were disabled (WHY?!)'
-      puts 'You can change user account in environment file'
-      puts "Here's the path: ./features/support/config/#{ENV['ENV_TYPE']}.yaml"
-      puts "\033\[0m"; # COLOR RESET
-      true
+    msg = "\033\[1;31m\n" \
+          "User account were disabled (WHY THEY DO THIS?!) \n" \
+          "You can change user account in environment file \n" \
+          "Here's the path: ./features/support/config/#{ENV['ENV_TYPE']}.yaml \n" \
+          "Or just run 'cucumber -t @create_user' to automatically create a new account \n" \
+          "\033\[0m \n"
 
-    elsif page.has_xpath?(@locator['input_captcha'])
-      puts "\033\[1;31m\n" # COLOR ALERT
-      puts "\nCAPTCHA detected, maybe the used account were disabled (WHY?!)"
-      puts 'You can change user account in environment file'
-      puts "Here's the path: ./features/support/config/#{ENV['ENV_TYPE']}.yaml"
-      puts "\033\[0m"; # COLOR RESET
-      true
-
-    elsif page.has_xpath?(@locator['label_captcha_error'])
-      puts "\033\[1;31m\n" # COLOR ALERT
-      puts "\nCAPTCHA detected, maybe the used account were disabled (WHY?!)"
-      puts 'You can change user account in environment file'
-      puts "Here's the path: ./features/support/config/#{ENV['ENV_TYPE']}.yaml"
-      puts "\033\[0m"; # COLOR RESET
+    if  page.has_xpath?(@locator['label_account_error']) ||
+        page.has_xpath?(@locator['input_captcha']) ||
+        page.has_xpath?(@locator['label_captcha_error'])
+      puts msg
       true
 
     else
