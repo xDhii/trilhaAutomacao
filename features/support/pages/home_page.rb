@@ -4,11 +4,18 @@
 class HomePage
   include Capybara::DSL
 
+  def initialize
+    @locator = LOCATOR['home_page']
+    @common = LOCATOR['common_page']
+  end
+
   def go
     visit '/'
+    page.has_xpath?(@common['img_logo'])
+    page.has_xpath?(@common['msg_welcome'])
   end
 
   def click_signup
-    find('//div[@class="panel header"]//a[contains(text(),"Create an Accoun")][1]').click
+    find(@common['link_createuser']).click
   end
 end
