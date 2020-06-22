@@ -12,6 +12,7 @@ Funcionalidade: Fluxo E2E
         Quando escolho o produto "Didi Sport Watch"
         Então finalizo a compra e gero o pedido
 
+    @e2e
     Cenario: Efetuar fluxo E2E com uma conta nova, criada no cenário de Criação de Usuário
         Dado que estou logado com "new_user"
         E que estou na página inicial
