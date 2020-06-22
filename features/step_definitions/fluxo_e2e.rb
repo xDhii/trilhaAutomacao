@@ -8,5 +8,6 @@ end
 
 Então('finalizo a compra e gero o pedido') do
   @checkout_page.go
-  @checkout_page.fill_checkout_address
+  @checkout_page.check_address
+  @checkout_page.finish_order
 end

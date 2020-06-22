@@ -12,7 +12,7 @@ Before do
 end
 
 Before('@login') do
-  env_user = CONFIG['users']['client']
+  new_user = CONFIG['users']['old_user']
   @login_page.go
-  @login_page.with(env_user['email'], env_user['pass'])
+  @login_page.with(new_user['email'], new_user['pass'])
 end

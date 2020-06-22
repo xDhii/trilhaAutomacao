@@ -7,11 +7,19 @@ class CheckoutPage
   def initialize
     @locator = LOCATOR['checkout_page']
     @common = LOCATOR['common_page']
-    @data = CONFIG['users']['client']
+    @data = CONFIG['users'][@usuario]
   end
 
   def go
     visit '/checkout/'
+  end
+
+  def check_address
+    if page.has_xpath?(@locator['label_existent_address'])
+      find(@locator['button_next']).click
+    else
+      fill_checkout_address
+    end
   end
 
   def fill_checkout_address
@@ -26,10 +34,14 @@ class CheckoutPage
     find(@locator['select_state_option'].gsub('state_opt_xxx', @data['state'])).click
     find(@locator['input_zip']).set(@data['zip'])
     find(@locator['input_phone']).set(@data['phone'])
-    find(@locator['radio_free_shipping']).click
+    find(@locator['radio_shipping']).click
     find(@locator['button_next']).click
-    sleep 15
   end
 
+  def finish_order
+    find(@locator['button_place_order']).click
 
+    purchase = find(@locator['label_order_confirmation']).text
+    puts "\n Your order number is: #{purchase}"
+  end
 end

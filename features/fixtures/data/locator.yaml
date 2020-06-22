@@ -45,6 +45,7 @@ product_page:
 # Checkout Page
 checkout_page:
   button_next:                  '//button[@data-role="opc-continue"]'
+  button_place_order:           '//button[@title="Place Order"]'
   input_company:                '//input[@name="company"]'
   input_address1:               '//input[@name="street[0]"]'
   input_address2:               '//input[@name="street[1]"]'
@@ -52,8 +53,10 @@ checkout_page:
   input_city:                   '//input[@name="city"]'
   input_zip:                    '//input[@name="postcode"]'
   input_phone:                  '//input[@name="telephone"]'
+  label_existent_address:       '//div[contains(@class, "shipping-address-item")]'
+  label_order_confirmation:     '//div[@class="checkout-success"]//a[@class="order-number"]'
   select_state_dropdown:        '//select[@name="region_id"]'
   select_state_option:          '//select[@name="region_id"]/option[@data-title="state_opt_xxx"]'
   select_country_dropdown:      '//select[@name="country_id"]'
   select_country_option:        '//select[@name="country_id"]/option[@data-title="country_opt_xxx"]'
-  radio_free_shipping:          '//*[contains(text(), "£0.00")]/ancestor::tr//input[@type="radio"]'
+  radio_shipping:               '//input[@type="radio"]'

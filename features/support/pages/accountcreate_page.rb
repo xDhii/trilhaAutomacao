@@ -39,8 +39,8 @@ class AccountCreate
 
   def save_user
     user = YAML.load_file("./features/support/config/#{ENV['ENV_TYPE']}.yaml")
-    user['users']['client']['email'] = @email
-    user['users']['client']['pass'] = @password
+    user['users']['new_user']['email'] = @email
+    user['users']['new_user']['pass'] = @password
     File.open("./features/support/config/#{ENV['ENV_TYPE']}.yaml", 'w') { |f| YAML.dump(user, f) }
   end
 
