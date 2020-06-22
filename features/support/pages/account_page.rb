@@ -5,8 +5,13 @@
 class AccountPage
   include Capybara::DSL
 
+  def initialize
+    @common = LOCATOR['common_page']
+    @locator = LOCATOR['account_page']
+  end
+
   def alert_check
-    page.has_xpath?(LOCATOR['alert_registered'])
-    page.has_no_xpath?(LOCATOR['link_createuser'])
+    page.has_xpath?(@locator['alert_registered'])
+    page.has_no_xpath?(@common['link_createuser'])
   end
 end
