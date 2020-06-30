@@ -1,2 +1,3 @@
+results/*
+!results/.gitkeep
 Gemfile.lock
-results/*.*
