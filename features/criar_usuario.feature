@@ -1,6 +1,5 @@
 #language:pt
 
-
 Funcionalidade: Cadastro de cliente
     Para que eu possa ter acesso ao ambiente de clientes e efetuar compras
     Sendo um novo cliente da plataforma
